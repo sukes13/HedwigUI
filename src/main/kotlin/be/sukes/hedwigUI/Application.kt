@@ -6,10 +6,11 @@ import io.ktor.server.routing.*
 
 fun main(args: Array<String>) = io.ktor.server.jetty.EngineMain.main(args)
 
+@Suppress("unused")
 fun Application.module() {
     routing {
         singlePageApplication {
-            react("react-app")
+            react("hedwig-react/build")
         }
     }
 }
